@@ -1,6 +1,3 @@
-getgenv().once = false
-
-if getgenv().once == false then
 function sandbox(var,func)
 	local env = getfenv(func)
 	local newenv = setmetatable({},{
@@ -2363,5 +2360,3 @@ for i,v in pairs(cors) do
 		pcall(v)
 	end)
 end	
-getgenv().once = true
-end
