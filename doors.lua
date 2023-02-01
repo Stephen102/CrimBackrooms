@@ -29,9 +29,6 @@ local function openDoor(doorTable)
 
     if doorTable.Model:FindFirstChild("Lock") then
         -- Unlock visual
-
-        doorTable.Model.Lock.Base.UnlockPrompt.Enabled = false
-        doorTable.Model.Lock.Base.UnlockPrompt:Destroy()
     end
 
     -- Door opening visual
@@ -157,7 +154,8 @@ DoorReplication.ReplicateDoor = function(doorTable)
     local connections = {}
 
     if doorTable.Model:FindFirstChild("Lock") then
-        connections.unlockBegan = doorTable.Model.Lock.Base.UnlockPrompt.PromptButtonHoldBegan:Connect(function()
+        connections.unlockBegan = doorTable.Model.Lock.Base.
+        Prompt.PromptButtonHoldBegan:Connect(function()
             for _, v in next, doorTable.Config.CustomKeyNames do
                 local key = Char:FindFirstChild(v)
 
