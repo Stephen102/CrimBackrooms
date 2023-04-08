@@ -15,6 +15,7 @@ end
 cors = {}
 mas = Instance.new("Model",game:GetService("Lighting"))
 Model0 = Instance.new("Model")
+Model0.Name = getgenv().object or "Model"
 Part1 = Instance.new("Part")
 Texture2 = Instance.new("Texture")
 Texture3 = Instance.new("Texture")
